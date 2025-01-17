@@ -9,6 +9,7 @@ from markdown_blocks import (
     block_type_olist,
     block_type_ulist,
     block_type_quote,
+    extract_title,
 )
 
 
@@ -169,6 +170,31 @@ this is paragraph text
             html,
             "<div><pre><code>This is a code block\n</code></pre><p>this is paragraph text</p></div>",
         )
+
+    def test_extract_title(self):
+        md = """
+# This is the title
+
+This is **bolded** paragraph
+"""
+        title = extract_title(md)
+        self.assertEqual(title, "This is the title")
+
+    def test_extract_title_no_title(self):
+        md = """
+This is **bolded** paragraph
+"""
+        with self.assertRaises(ValueError):
+            extract_title(md)
+
+    def test_extract_title_multiple_titles(self):
+        md = """
+# This is the first title
+
+# This is the second title
+"""
+        title = extract_title(md)
+        self.assertEqual(title, "This is the first title")
 
 
 if __name__ == "__main__":
