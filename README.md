@@ -9,8 +9,10 @@ This project provides a set of tools to convert Markdown text into HTML. It incl
 - `src/htmlnode.py`: Contains classes for HTML nodes (`HTMLNode`, `LeafNode`, `ParentNode`).
 - `src/inline_markdown.py`: Functions to parse inline Markdown elements.
 - `src/main.py`: Main entry point of the application.
+- `src/markdown_blocks.py`: Functions to parse Markdown blocks and convert them to HTML nodes.
 - `src/test_htmlnode.py`: Unit tests for HTML node classes.
 - `src/test_inline_markdown.py`: Unit tests for inline Markdown parsing functions.
+- `src/test_markdown_blocks.py`: Unit tests for Markdown block parsing and conversion functions.
 - `src/test_textnode.py`: Unit tests for text node classes and functions.
 - `src/textnode.py`: Contains classes for text nodes and functions to convert them to HTML nodes.
 
