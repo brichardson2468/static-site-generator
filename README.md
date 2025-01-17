@@ -20,11 +20,11 @@ This project provides a set of tools to convert Markdown text into HTML. It incl
 
 ### To run the main program
 
-./main.sh
+`./main.sh`
 
 ### To run the tests
 
-./test.sh
+`./test.sh`
 
 ## License
 
