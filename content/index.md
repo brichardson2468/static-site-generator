@@ -25,7 +25,7 @@
 
 Here's what `elflang` looks like (the perfect coding language):
 
-```
+```sh
 func main(){
     fmt.Println("Hello, World!")
 }
